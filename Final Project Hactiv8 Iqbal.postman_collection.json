@@ -1,0 +1,532 @@
+{
+	"info": {
+		"_postman_id": "a5f24ecc-61fe-4336-86be-af5edb37d67b",
+		"name": "Final Project Hactiv8 Iqbal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1921975"
+	},
+	"item": [
+		{
+			"name": "Photo",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/photos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"photos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/photos/a1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"photos",
+								"a1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"a123\",\n    \"caption\" : \"caption\",\n    \"photo_url\" : \"https://google.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/photos/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"photos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"a123\",\n    \"caption\" : \"captionasasasasa\",\n    \"photo_url\" : \"https://google.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/photos/40447360-d0c0-478a-9270-889e3bf8b9b3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"photos",
+								"40447360-d0c0-478a-9270-889e3bf8b9b3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"a123\",\n    \"caption\" : \"captionasasasasa\",\n    \"photo_url\" : \"https://google.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/photos/40447360-d0c0-478a-9270-889e3bf8b9b3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"photos",
+								"40447360-d0c0-478a-9270-889e3bf8b9b3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/comments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/comments/a1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"a1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"photo_id\" : \"bdb698ef-5d5e-4485-af5c-d1128d08fc8e\",\n    \"message\" : \"testing\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/comments/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"photo_id\" : \"bdb698ef-5d5e-4485-af5c-d1128d08fc8e\",\n    \"message\" : \"testasasaing\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/comments/1ec46373-9599-414f-8cdc-f7adc8f4a324",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"1ec46373-9599-414f-8cdc-f7adc8f4a324"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"a123\",\n    \"caption\" : \"captionasasasasa\",\n    \"photo_url\" : \"https://google.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/comments/40447360-d0c0-478a-9270-889e3bf8b9b3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"40447360-d0c0-478a-9270-889e3bf8b9b3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Social Media",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/socialmedia",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"socialmedia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/socialmedia/a1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"socialmedia",
+								"a1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"social_media_url\" : \"https://google.comasasa\",\n    \"name\" : \"testing\"    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/socialmedia/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"socialmedia",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"social_media_url\" : \"https://google.comasasa\",\n    \"name\" : \"testing\"    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/socialmedia/40b411b4-62b4-4941-bf59-5a0c26e1f9c7",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"socialmedia",
+								"40b411b4-62b4-4941-bf59-5a0c26e1f9c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"a123\",\n    \"caption\" : \"captionasasasasa\",\n    \"photo_url\" : \"https://google.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/socialmedia/40b411b4-62b4-4941-bf59-5a0c26e1f9c7",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"socialmedia",
+								"40b411b4-62b4-4941-bf59-5a0c26e1f9c7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"iqbal1311\",\n    \"password\" : \"abcdefghi\",\n    \"email\" : \"maulanaiqbal1321@gmail.com\",\n    \"age\" : 21\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"maulanaiqbal1321@gmail.com\",\n    \"password\" : \"abcdefghi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
